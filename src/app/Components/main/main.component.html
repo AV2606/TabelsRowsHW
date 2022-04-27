@@ -1,0 +1,53 @@
+<h2>Users:</h2>
+<hr>
+<table class="table striped">
+    <thead>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                id
+            </td>
+            <td>
+                user name
+            </td>
+            <td>
+                email
+            </td>
+            <td>
+                password
+            </td>
+            <td>
+                phone number
+            </td>
+            <td>
+                address
+            </td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <button class="btn btn-info btn-sm" (click)="inspectUser(u)" >Inspect</button>
+            <td>
+                {{u.id}}
+            </td>
+            <td>
+                {{u.username}}
+            </td>
+            <td>
+                {{u.email}}
+            </td>
+            <td>
+                {{u.password}}
+            </td>
+            <td>
+                {{u.phone}}
+            </td>
+            <td>
+                {{u.address.street}}&nbsp;{{u.address.number}},{{u.address.city}}
+            </td>
+        </tr>
+    </tbody>
+</table>
